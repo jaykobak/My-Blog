@@ -17,7 +17,7 @@ from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 load_dotenv()  # Load environment variables from .env file
  
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SECRET_KEY'] = os.getenv('FLASK_KEY')
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 # LoginManager is needed for our application to be able to log in and out users
